@@ -1,0 +1,17 @@
+.navbar-expand-lg {
+    background-color: #660066 !important;
+}
+.jumbotron {
+    background-image: url(/static/images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.display-5 {
+    color: rgb(77, 153, 0) !important;
+    font-size: 50px;
+}
+.sub-display {
+    color: red !important;
+    font-size: 20px;
+}

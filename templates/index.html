@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.3/cerulean/bootstrap.min.css"
+    integrity="sha512-dQLT/B7byn2LjN/DN4zeBKpwGV6qbidV0XiMRWQOL7TGrV7FkZFldkGG+DGMU+CQnMTcRZlUI7GMWt1j6akNew=="
+    crossorigin="anonymous" />
+    <link rel="shortcut icon" href="{% static 'images/weather-forecast-vector-11181087.jpg' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <title>YouTube Downloader</title>
+</head>
+
+<body>
+  <div class="navbar navbar-expand-lg fixed-top ">
+    <div class="container-fluid">
+      <a href="../" class="navbar-brand">YouTube Video Converter <span style="color: rgb(50, 168, 123);"> <strong> - Django
+            Framework By Chris</strong>
+        </span> </a>
+    </div>
+  </div>
+
+  <br /><br /> <br>
+  <div id="jumbotron" class="jumbotron" style="text-align: center; margin-top:-50px">
+    <h1 class="display-5">Youtube Video Downloader </h1>
+    <h5 class="sub-display">Using Python Language and Django Framework</h5>
+
+    <img src="{% static 'images/youtube-editorial-app-icon-free-vector.jpg' %}" class="image" style="width:100px; margin-bottom:-50px; ">
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <form method="post" class="col-md">
+      {% csrf_token %}
+      <div class=" input-group">
+
+      <input type="url" class="form-control" name="link" placeholder="Enter your video link here ..." required>
+      <div class="input-group-btn">
+        <button type="submit" class="btn btn-danger">Download</button>
+      </div>
+      </div>
+      <form>
+  </nav>
+  <br> <br>
+  <div class="row">
+    {% if title and thumbnail %}
+    <div class="col d-flex justify-content-center"  >
+      <div class=" card text-white bg-dark mb-6">
+      <div class=" card-body">
+        <h4><span class="badge badge-primary">Title :</span> {{title}}</h4>
+        <h4><span class="badge badge-primary">Thumbnail :</span> <img
+            src="{{ thumbnail}}" alt="Image" style="width:300px; height:200px"></h4>
+        
+      </div>
+      {% endif %}
+    </div>
+</body>
+
+</html>
